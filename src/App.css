@@ -1,0 +1,112 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+  flex-direction: column;   
+  background-color: rgb(141, 137, 137);
+  min-height: 100vh;       
+  width: 100vw;            
+  margin: 0;                
+}
+.Toolbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;          /* Fixes the toolbar to the left */
+  top: 50%;                 /* Centers vertically in the viewport */
+  left: 0;                  /* Aligns the toolbar to the left edge */
+  transform: translateY(-50%); /* Adjusts the toolbar so that it’s truly centered */
+  gap: 8px;                 /* Adds space between items */
+  padding: 8px 8px;         /* Adds padding inside the toolbar */
+  background-color: #333;   /* Optional: toolbar background color */
+  color: white;             /* Optional: text color for the toolbar items */
+  width: 50px;              /* Optional: set the width of the toolbar */
+  height: auto;             /* Optional: allows height to adjust based on content */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow to the toolbar */
+}
+
+
+.button{
+  height: 70px;
+  width: 120px;
+  font-size: 20px;
+}
+
+#Canvas{
+  
+  z-index: 2;
+  height: 600px;
+  width: 800px;
+  border: 1px solid #000; /* Add border for visibility */
+  display: block;
+  color: beige;
+  
+}
+
+#sync{
+  background-color: #121c42;
+  color: white;
+  border: none;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lower-Canvas{
+  position: initial;
+}
+
+.settings-panel {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #4b4b4b;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.settings-panel label {
+  font-weight: bold;
+  text-align: center;
+}
+
+.settings-panel input[type="color"] {
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.settings-panel button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.settings-panel button:hover {
+  background-color: #cc0000;
+}
